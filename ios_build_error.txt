@@ -1,0 +1,469 @@
+flutter build ipa --obfuscate --split-debug-info=build/app/outputs/symbols
+
+Archiving com.test.xyz...
+Automatically signing iOS for device deployment using specified development team in Xcode project: 
+Running Xcode build...                                                  
+ └─Compiling, linking and signing...                         6.2s
+Xcode archive done.                                         62.1s
+Failed to build iOS app
+Error output from Xcode build:
+↳
+    ** ARCHIVE FAILED **
+
+
+Xcode's output:
+↳
+    Writing result bundle at path:
+        /var/folders/31/5g_c1hvx4g170y6hljt_rf840000gn/T/flutter_tools.JP9S3f/flutter_ios_build_temp_dirSWy8zi/temporary_xcresult_bundle
+
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:54:38: warning: 'CTCarrier'
+    is deprecated: first deprecated in iOS 16.0 - Deprecated with no replacement [-Wdeprecated-declarations]
+    -(bool)canPlacePhoneCallWithCarrier:(CTCarrier *)carrier {
+                                         ^
+    In module 'CoreTelephony' imported from
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:8:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTCarrier.h:17:12: note: 'CTCarrier' has been explicitly marked deprecated here
+    @interface CTCarrier : NSObject
+               ^
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:39:30: warning: 'CTCarrier'
+    is deprecated: first deprecated in iOS 16.0 - Deprecated with no replacement [-Wdeprecated-declarations]
+        NSDictionary<NSString *, CTCarrier *> *providers = [netInfo serviceSubscriberCellularProviders];
+                                 ^
+    In module 'CoreTelephony' imported from
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:8:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTCarrier.h:17:12: note: 'CTCarrier' has been explicitly marked deprecated here
+    @interface CTCarrier : NSObject
+               ^
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:39:65: warning:
+    'serviceSubscriberCellularProviders' is deprecated: first deprecated in iOS 16.0 - Deprecated with no replacement [-Wdeprecated-declarations]
+        NSDictionary<NSString *, CTCarrier *> *providers = [netInfo serviceSubscriberCellularProviders];
+                                                                    ^
+    In module 'CoreTelephony' imported from
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:8:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTTelephonyNetworkInfo.h:105:78: note: property 'serviceSubscriberCellularProviders' is declared deprecated here
+    @property(readonly, retain, nullable) NSDictionary<NSString *, CTCarrier *> *serviceSubscriberCellularProviders API_DEPRECATED("Deprecated with no
+    replacement", ios(12.0, 16.0), watchos(5.0, 9.0)) API_UNAVAILABLE(macos, tvos);
+                                                                                 ^
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTTelephonyNetworkInfo.h:105:78: note: 'serviceSubscriberCellularProviders' has been explicitly marked deprecated here
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:41:7: warning: 'CTCarrier'
+    is deprecated: first deprecated in iOS 16.0 - Deprecated with no replacement [-Wdeprecated-declarations]
+          CTCarrier *carrier = [providers objectForKey:key];
+          ^
+    In module 'CoreTelephony' imported from
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:8:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTCarrier.h:17:12: note: 'CTCarrier' has been explicitly marked deprecated here
+    @interface CTCarrier : NSObject
+               ^
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:49:5: warning: 'CTCarrier'
+    is deprecated: first deprecated in iOS 16.0 - Deprecated with no replacement [-Wdeprecated-declarations]
+        CTCarrier *carrier = [netInfo subscriberCellularProvider];
+        ^
+    In module 'CoreTelephony' imported from
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:8:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTCarrier.h:17:12: note: 'CTCarrier' has been explicitly marked deprecated here
+    @interface CTCarrier : NSObject
+               ^
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:49:35: warning:
+    'subscriberCellularProvider' is deprecated: first deprecated in iOS 12.0 [-Wdeprecated-declarations]
+        CTCarrier *carrier = [netInfo subscriberCellularProvider];
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      serviceSubscriberCellularProviders
+    In module 'CoreTelephony' imported from
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:8:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTTelephonyNetworkInfo.h:114:50: note: property 'subscriberCellularProvider' is declared deprecated here
+    @property(readonly, retain, nullable) CTCarrier *subscriberCellularProvider API_DEPRECATED_WITH_REPLACEMENT("serviceSubscriberCellularProviders",
+    ios(4.0, 12.0)) API_UNAVAILABLE(macos);
+                                                     ^
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTTelephonyNetworkInfo.h:114:50: note: 'subscriberCellularProvider' has been explicitly marked deprecated here
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:56:28: warning:
+    'mobileNetworkCode' is deprecated: first deprecated in iOS 16.0 - Deprecated; returns '65535' at some point in the future
+    [-Wdeprecated-declarations]
+      NSString *mnc = [carrier mobileNetworkCode];
+                               ^
+    In module 'CoreTelephony' imported from
+    /Users/abc/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/ios/Classes/strategies/PhonePermissionStrategy.m:8:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTCarrier.h:50:61: note: property 'mobileNetworkCode' is declared deprecated here
+    @property (nonatomic, readonly, retain, nullable) NSString *mobileNetworkCode
+                                                                ^
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreTelephony.frame
+    work/Headers/CTCarrier.h:50:61: note: 'mobileNetworkCode' has been explicitly marked deprecated here
+    7 warnings generated.
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryContentVC.swift:39:52: warning: using 'class' keyword to define
+    a class-constrained protocol is deprecated; use 'AnyObject' instead
+    internal protocol DKPhotoGalleryContentDataSource: class {
+                                                       ^~~~~
+                                                       AnyObject
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryContentVC.swift:55:50: warning: using 'class' keyword to define
+    a class-constrained protocol is deprecated; use 'AnyObject' instead
+    internal protocol DKPhotoGalleryContentDelegate: class {
+                                                     ^~~~~
+                                                     AnyObject
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoIncrementalIndicator.swift:161:124: warning: forming
+    'UnsafeMutableRawPointer' to an inout variable of type String exposes the internal representation rather than the string contents.
+            scrollView.addObserver(self, forKeyPath: DKPhotoIncrementalIndicator.contentSizeKeyPath, options: [.new], context:
+            &DKPhotoIncrementalIndicator.context)
+                                                                                                                               ^
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoIncrementalIndicator.swift:162:126: warning: forming
+    'UnsafeMutableRawPointer' to an inout variable of type String exposes the internal representation rather than the string contents.
+            scrollView.addObserver(self, forKeyPath: DKPhotoIncrementalIndicator.contentOffsetKeyPath, options: [.new], context:
+            &DKPhotoIncrementalIndicator.context)
+                                                                                                                                 ^
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoIncrementalIndicator.swift:171:23: warning: forming
+    'UnsafeMutableRawPointer' to an inout variable of type String exposes the internal representation rather than the string contents.
+            if context == &DKPhotoIncrementalIndicator.context {
+                          ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:55:68: warning: 'windows' is deprecated: first deprecated
+    in iOS 15.0 - Use UIWindowScene.windows on a relevant window scene instead [-Wdeprecated-declarations]
+            for (UIWindow *window in [UIApplication sharedApplication].windows) {
+                                                                       ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIApplication.h:109:62: note: 'windows' has been explicitly marked deprecated here
+    @property(nonatomic,readonly) NSArray<__kindof UIWindow *>  *windows API_DEPRECATED("Use UIWindowScene.windows on a relevant window scene instead",
+    ios(2.0, 15.0), visionos(1.0, 1.0));
+                                                                 ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:197:112: warning: 'UIDocumentPickerModeExportToService' is
+    deprecated: first deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+        self.documentPickerController = [[UIDocumentPickerViewController alloc] initWithURL:destinationPath inMode:UIDocumentPickerModeExportToService];
+                                                                                                                   ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:30:29: note: 'UIDocumentPickerMode' has been explicitly marked deprecated here
+    typedef NS_ENUM(NSUInteger, UIDocumentPickerMode) {
+                                ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:197:77: warning: 'initWithURL:inMode:' is deprecated: first
+    deprecated in iOS 14.0 [-Wdeprecated-declarations]
+        self.documentPickerController = [[UIDocumentPickerViewController alloc] initWithURL:destinationPath inMode:UIDocumentPickerModeExportToService];
+                                                                                ^~~~~~~~~~~
+                                                                                use initForExportingURLs:asCopy: or initForExportingURLs: instead
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:53:1: note: 'initWithURL:inMode:' has been explicitly marked deprecated here
+    - (instancetype)initWithURL:(NSURL *)url inMode:(UIDocumentPickerMode)mode NS_DESIGNATED_INITIALIZER API_DEPRECATED_WITH_REPLACEMENT("use
+    initForExportingURLs:asCopy: or initForExportingURLs: instead", ios(8.0, 14.0), visionos(1.0, 1.0)) API_UNAVAILABLE(tvos);
+    ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:215:64: warning: 'UIDocumentPickerModeOpen' is deprecated:
+    first deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+                                             inMode: isDirectory ? UIDocumentPickerModeOpen : UIDocumentPickerModeImport];
+                                                                   ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:30:29: note: 'UIDocumentPickerMode' has been explicitly marked deprecated here
+    typedef NS_ENUM(NSUInteger, UIDocumentPickerMode) {
+                                ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:215:91: warning: 'UIDocumentPickerModeImport' is
+    deprecated: first deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+                                             inMode: isDirectory ? UIDocumentPickerModeOpen : UIDocumentPickerModeImport];
+                                                                                              ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:30:29: note: 'UIDocumentPickerMode' has been explicitly marked deprecated here
+    typedef NS_ENUM(NSUInteger, UIDocumentPickerMode) {
+                                ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:214:42: warning: 'initWithDocumentTypes:inMode:' is
+    deprecated: first deprecated in iOS 14.0 [-Wdeprecated-declarations]
+                                             initWithDocumentTypes: isDirectory ? @[@"public.folder"] : self.allowedExtensions
+                                             ^~~~~~~~~~~~~~~~~~~~~
+                                             use initForOpeningContentTypes:asCopy: or initForOpeningContentTypes: instead
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:41:1: note: 'initWithDocumentTypes:inMode:' has been explicitly marked deprecated here
+    - (instancetype)initWithDocumentTypes:(NSArray <NSString *>*)allowedUTIs inMode:(UIDocumentPickerMode)mode NS_DESIGNATED_INITIALIZER
+    API_DEPRECATED_WITH_REPLACEMENT("use initForOpeningContentTypes:asCopy: or initForOpeningContentTypes: instead", ios(8.0, 14.0), visionos(1.0, 1.0))
+    API_UNAVAILABLE(tvos);
+    ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:256:52: warning: 'kUTTypeMovie' is deprecated: first
+    deprecated in iOS 15.0 - Use UTTypeMovie or UTType.movie (swift) instead. [-Wdeprecated-declarations]
+        NSArray<NSString*> * videoTypes = @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeAVIMovie, (NSString*)kUTTypeVideo, (NSString*)kUTTypeMPEG4];
+                                                       ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTCoreTypes.h:880:26: note: 'kUTTypeMovie' has been explicitly marked deprecated here
+    extern const CFStringRef kUTTypeMovie                                API_DEPRECATED("Use UTTypeMovie or UTType.movie (swift) instead.", ios(3.0,
+    15.0), macos(10.4, 12.0), tvos(9.0, 15.0), watchos(1.0, 8.0));
+                             ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:256:77: warning: 'kUTTypeAVIMovie' is deprecated: first
+    deprecated in iOS 15.0 - Use UTTypeAVI or UTType.avi (swift) instead. [-Wdeprecated-declarations]
+        NSArray<NSString*> * videoTypes = @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeAVIMovie, (NSString*)kUTTypeVideo, (NSString*)kUTTypeMPEG4];
+                                                                                ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTCoreTypes.h:892:26: note: 'kUTTypeAVIMovie' has been explicitly marked deprecated here
+    extern const CFStringRef kUTTypeAVIMovie                             API_DEPRECATED("Use UTTypeAVI or UTType.avi (swift) instead.", ios(8.0, 15.0),
+    macos(10.10, 12.0), tvos(9.0, 15.0), watchos(1.0, 8.0));
+                             ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:256:105: warning: 'kUTTypeVideo' is deprecated: first
+    deprecated in iOS 15.0 - Use UTTypeVideo or UTType.video (swift) instead. [-Wdeprecated-declarations]
+        NSArray<NSString*> * videoTypes = @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeAVIMovie, (NSString*)kUTTypeVideo, (NSString*)kUTTypeMPEG4];
+                                                                                                            ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTCoreTypes.h:881:26: note: 'kUTTypeVideo' has been explicitly marked deprecated here
+    extern const CFStringRef kUTTypeVideo                                API_DEPRECATED("Use UTTypeVideo or UTType.video (swift) instead.", ios(3.0,
+    15.0), macos(10.4, 12.0), tvos(9.0, 15.0), watchos(1.0, 8.0));
+                             ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:256:130: warning: 'kUTTypeMPEG4' is deprecated: first
+    deprecated in iOS 15.0 - Use UTTypeMPEG4Movie or UTType.mpeg4 (swift) instead. [-Wdeprecated-declarations]
+        NSArray<NSString*> * videoTypes = @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeAVIMovie, (NSString*)kUTTypeVideo, (NSString*)kUTTypeMPEG4];
+                                                                                                                                     ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTCoreTypes.h:888:26: note: 'kUTTypeMPEG4' has been explicitly marked deprecated here
+    extern const CFStringRef kUTTypeMPEG4                                API_DEPRECATED("Use UTTypeMPEG4Movie or UTType.mpeg4 (swift) instead.",
+    ios(3.0, 15.0), macos(10.4, 12.0), tvos(9.0, 15.0), watchos(1.0, 8.0));
+                             ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:257:53: warning: 'kUTTypeImage' is deprecated: first
+    deprecated in iOS 15.0 - Use UTTypeImage or UTType.image (swift) instead. [-Wdeprecated-declarations]
+        NSArray<NSString*> * imageTypes = @[(NSString *)kUTTypeImage];
+                                                        ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTCoreTypes.h:725:26: note: 'kUTTypeImage' has been explicitly marked deprecated here
+    extern const CFStringRef kUTTypeImage                                API_DEPRECATED("Use UTTypeImage or UTType.image (swift) instead.", ios(3.0,
+    15.0), macos(10.4, 12.0), tvos(9.0, 15.0), watchos(1.0, 8.0));
+                             ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:289:106: warning: 'UIActivityIndicatorViewStyleWhite' is
+    deprecated: first deprecated in iOS 13.0 [-Wdeprecated-declarations]
+        UIActivityIndicatorView* indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+                                                                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                                                             UIActivityIndicatorViewStyleMedium
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIActivityIndicatorView.h:19:5: note: 'UIActivityIndicatorViewStyleWhite' has been explicitly marked deprecated here
+        UIActivityIndicatorViewStyleWhite API_DEPRECATED_WITH_REPLACEMENT("UIActivityIndicatorViewStyleMedium", ios(2.0, 13.0), tvos(9.0, 13.0))
+        API_UNAVAILABLE(visionos) = 1,
+        ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:404:19: warning: 'documentPickerMode' is deprecated: first
+    deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+        if(controller.documentPickerMode == UIDocumentPickerModeOpen) {
+                      ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:66:62: note: 'documentPickerMode' has been explicitly marked deprecated here
+    @property (nonatomic, assign, readonly) UIDocumentPickerMode documentPickerMode API_DEPRECATED("Use appropriate initializers instead",ios(8.0,14.0),
+    visionos(1.0, 1.0));
+                                                                 ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:404:41: warning: 'UIDocumentPickerModeOpen' is deprecated:
+    first deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+        if(controller.documentPickerMode == UIDocumentPickerModeOpen) {
+                                            ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:30:29: note: 'UIDocumentPickerMode' has been explicitly marked deprecated here
+    typedef NS_ENUM(NSUInteger, UIDocumentPickerMode) {
+                                ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:405:17: warning: incompatible pointer types assigning to
+    'NSMutableArray<NSURL *> *' from 'NSArray<NSURL *> *' [-Wincompatible-pointer-types]
+            newUrls = urls;
+                    ^ ~~~~
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:407:19: warning: 'documentPickerMode' is deprecated: first
+    deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+        if(controller.documentPickerMode == UIDocumentPickerModeImport) {
+                      ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:66:62: note: 'documentPickerMode' has been explicitly marked deprecated here
+    @property (nonatomic, assign, readonly) UIDocumentPickerMode documentPickerMode API_DEPRECATED("Use appropriate initializers instead",ios(8.0,14.0),
+    visionos(1.0, 1.0));
+                                                                 ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:407:41: warning: 'UIDocumentPickerModeImport' is
+    deprecated: first deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+        if(controller.documentPickerMode == UIDocumentPickerModeImport) {
+                                            ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:30:29: note: 'UIDocumentPickerMode' has been explicitly marked deprecated here
+    typedef NS_ENUM(NSUInteger, UIDocumentPickerMode) {
+                                ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:434:19: warning: 'documentPickerMode' is deprecated: first
+    deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+        if(controller.documentPickerMode == UIDocumentPickerModeOpen) {
+                      ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:66:62: note: 'documentPickerMode' has been explicitly marked deprecated here
+    @property (nonatomic, assign, readonly) UIDocumentPickerMode documentPickerMode API_DEPRECATED("Use appropriate initializers instead",ios(8.0,14.0),
+    visionos(1.0, 1.0));
+                                                                 ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:434:41: warning: 'UIDocumentPickerModeOpen' is deprecated:
+    first deprecated in iOS 14.0 - Use appropriate initializers instead [-Wdeprecated-declarations]
+        if(controller.documentPickerMode == UIDocumentPickerModeOpen) {
+                                            ^
+    In module 'UIKit' imported from /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/file_picker/file_picker-prefix.pch:2:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/UIKit.framework/Hea
+    ders/UIDocumentPickerViewController.h:30:29: note: 'UIDocumentPickerMode' has been explicitly marked deprecated here
+    typedef NS_ENUM(NSUInteger, UIDocumentPickerMode) {
+                                ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:549:25: warning: 'UTTypeConformsTo' is deprecated: first
+    deprecated in iOS 15.0 - Use -[UTType conformsToType:] instead. [-Wdeprecated-declarations]
+                        if (UTTypeConformsTo(UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, CFBridgingRetain([item pathExtension]),
+                        NULL), kUTTypeImage)) {
+                            ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTType.h:472:1: note: 'UTTypeConformsTo' has been explicitly marked deprecated here
+    UTTypeConformsTo(
+    ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:549:42: warning: 'UTTypeCreatePreferredIdentifierForTag' is
+    deprecated: first deprecated in iOS 15.0 - Use the UTType class instead. [-Wdeprecated-declarations]
+                        if (UTTypeConformsTo(UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, CFBridgingRetain([item pathExtension]),
+                        NULL), kUTTypeImage)) {
+                                             ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTType.h:317:1: note: 'UTTypeCreatePreferredIdentifierForTag' has been explicitly marked deprecated here
+    UTTypeCreatePreferredIdentifierForTag(
+    ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:549:80: warning: 'kUTTagClassFilenameExtension' is
+    deprecated: first deprecated in iOS 15.0 - Use UTTagClassFilenameExtension instead. [-Wdeprecated-declarations]
+                        if (UTTypeConformsTo(UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, CFBridgingRetain([item pathExtension]),
+                        NULL), kUTTypeImage)) {
+                                                                                   ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTType.h:258:26: note: 'kUTTagClassFilenameExtension' has been explicitly marked deprecated here
+    extern const CFStringRef kUTTagClassFilenameExtension                API_DEPRECATED("Use UTTagClassFilenameExtension instead.", ios(3.0, 15.0),
+    macos(10.3, 12.0), tvos(9.0, 15.0), watchos(1.0, 8.0));
+                             ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.m:549:157: warning: 'kUTTypeImage' is deprecated: first
+    deprecated in iOS 15.0 - Use UTTypeImage or UTType.image (swift) instead. [-Wdeprecated-declarations]
+                        if (UTTypeConformsTo(UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, CFBridgingRetain([item pathExtension]),
+                        NULL), kUTTypeImage)) {
+                                                                                                                                              ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FilePickerPlugin.h:5:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTCoreTypes.h:725:26: note: 'kUTTypeImage' has been explicitly marked deprecated here
+    extern const CFStringRef kUTTypeImage                                API_DEPRECATED("Use UTTypeImage or UTType.image (swift) instead.", ios(3.0,
+    15.0), macos(10.4, 12.0), tvos(9.0, 15.0), watchos(1.0, 8.0));
+                             ^
+    23 warnings generated.
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FileUtils.m:52:31: warning: 'UTTypeCreatePreferredIdentifierForTag' is
+    deprecated: first deprecated in iOS 15.0 - Use the UTType class instead. [-Wdeprecated-declarations]
+                CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)[format pathExtension],
+                NULL);
+                                  ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FileUtils.h:7:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTType.h:317:1: note: 'UTTypeCreatePreferredIdentifierForTag' has been explicitly marked deprecated here
+    UTTypeCreatePreferredIdentifierForTag(
+    ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FileUtils.m:52:69: warning: 'kUTTagClassFilenameExtension' is deprecated:
+    first deprecated in iOS 15.0 - Use UTTagClassFilenameExtension instead. [-Wdeprecated-declarations]
+                CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)[format pathExtension],
+                NULL);
+                                                                        ^
+    In module 'MobileCoreServices' imported from /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FileUtils.h:7:
+    In module 'CoreServices' imported from
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MobileCoreServices.
+    framework/Headers/MobileCoreServices.h:9:
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/CoreServices.framew
+    ork/Headers/UTType.h:258:26: note: 'kUTTagClassFilenameExtension' has been explicitly marked deprecated here
+    extern const CFStringRef kUTTagClassFilenameExtension                API_DEPRECATED("Use UTTagClassFilenameExtension instead.", ios(3.0, 15.0),
+    macos(10.3, 12.0), tvos(9.0, 15.0), watchos(1.0, 8.0));
+                             ^
+    /Users/abc/.pub-cache/hosted/pub.dev/file_picker-8.0.5/ios/Classes/FileUtils.m:133:30: warning: unused variable 'exportError' [-Wunused-variable]
+                        NSError *exportError = exporter.error;
+                                 ^
+    3 warnings generated.
+    /* com.apple.actool.document.warnings */
+    /Users/abc/MyFlutterDev/someappname/ios/Runner/Assets.xcassets:./AppIcon.appiconset/(null)[2d][Icon-App-50x50@1x.png]: warning: The app icon set
+    "AppIcon" has 6 unassigned children.
+    /* com.apple.actool.compilation-results */
+    /Users/abc/Library/Developer/Xcode/DerivedData/Runner-eqrncvjxdcemicgwbbcuamuuhtfu/Build/Intermediates.noindex/ArchiveIntermediates/Runner/Interm
+    ediateBuildFilesPath/Runner.build/Release-iphoneos/Runner.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+    /Users/abc/Library/Developer/Xcode/DerivedData/Runner-eqrncvjxdcemicgwbbcuamuuhtfu/Build/Intermediates.noindex/ArchiveIntermediates/Runner/Interm
+    ediateBuildFilesPath/Runner.build/Release-iphoneos/Runner.build/DerivedSources/GeneratedAssetSymbols.h
+    /Users/abc/Library/Developer/Xcode/DerivedData/Runner-eqrncvjxdcemicgwbbcuamuuhtfu/Build/Intermediates.noindex/ArchiveIntermediates/Runner/Interm
+    ediateBuildFilesPath/Runner.build/Release-iphoneos/Runner.build/DerivedSources/GeneratedAssetSymbols.swift
+
+    /* com.apple.actool.document.warnings */
+    /Users/abc/MyFlutterDev/someappname/ios/Runner/Assets.xcassets:./AppIcon.appiconset/(null)[2d][Icon-App-50x50@1x.png]: warning: The app icon set
+    "AppIcon" has 6 unassigned children.
+    /Users/abc/MyFlutterDev/someappname/ios/Runner/Assets.xcassets:./AppIcon.appiconset/(null)[2d][Icon-App-50x50@1x.png]: warning: The app icon set
+    "AppIcon" has 6 unassigned children.
+    /* com.apple.actool.document.notices */
+    /Users/abc/MyFlutterDev/someappname/ios/Runner/Assets.xcassets:./AppIcon.appiconset/[][ipad][76x76][][][1x][][][]: notice: 76x76@1x app icons only apply
+    to iPad apps targeting releases of iOS prior to 10.0.
+    /* com.apple.actool.compilation-results */
+    /Users/abc/Library/Developer/Xcode/DerivedData/Runner-eqrncvjxdcemicgwbbcuamuuhtfu/Build/Intermediates.noindex/ArchiveIntermediates/Runner/Instal
+    lationBuildProductsLocation/Applications/Runner.app/AppIcon60x60@2x.png
+    /Users/abc/Library/Developer/Xcode/DerivedData/Runner-eqrncvjxdcemicgwbbcuamuuhtfu/Build/Intermediates.noindex/ArchiveIntermediates/Runner/Instal
+    lationBuildProductsLocation/Applications/Runner.app/AppIcon76x76@2x~ipad.png
+    /Users/abc/Library/Developer/Xcode/DerivedData/Runner-eqrncvjxdcemicgwbbcuamuuhtfu/Build/Intermediates.noindex/ArchiveIntermediates/Runner/Instal
+    lationBuildProductsLocation/Applications/Runner.app/Assets.car
+    /Users/abc/Library/Developer/Xcode/DerivedData/Runner-eqrncvjxdcemicgwbbcuamuuhtfu/Build/Intermediates.noindex/ArchiveIntermediates/Runner/Interm
+    ediateBuildFilesPath/Runner.build/Release-iphoneos/Runner.build/assetcatalog_generated_info.plist
+
+    /Users/abc/Library/Developer/Xcode/DerivedData/Runner-eqrncvjxdcemicgwbbcuamuuhtfu/Build/Intermediates.noindex/ArchiveIntermediates/Runner/Interm
+    ediateBuildFilesPath/Runner.build/Release-iphoneos/Runner.build/Script-D7CDC697AB729E866DB6E76E.sh: line 2:
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh: Permission denied
+    Command PhaseScriptExecution failed with a nonzero exit code
+    note: Run script build phase 'Run Script' will be run during every build because the option to run the script phase "Based on dependency analysis"
+    is unchecked. (in target 'Runner' from project 'Runner')
+    note: Run script build phase 'Thin Binary' will be run during every build because the option to run the script phase "Based on dependency analysis"
+    is unchecked. (in target 'Runner' from project 'Runner')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'wakelock_plus-thermal' from project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'permission_handler_apple-permission_handler_apple_privacy' from
+    project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'flutter_native_splash-flutter_native_splash_privacy' from project
+    'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'file_picker-file_picker_ios_privacy' from project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'SwiftyGif' from project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'SDWebImage-SDWebImage' from project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'SDWebImage' from project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'DKPhotoGallery-DKPhotoGallery' from project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'DKPhotoGallery' from project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'DKImagePickerController-DKImagePickerController' from project 'Pods')
+    /Users/abc/MyFlutterDev/someappname/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the
+    range of supported deployment target versions is 12.0 to 17.5.99. (in target 'DKImagePickerController' from project 'Pods')
+
+Encountered error while archiving for device.
